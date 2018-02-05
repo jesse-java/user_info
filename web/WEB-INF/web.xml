@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+    <servlet>
+        <servlet-name>User Info</servlet-name>
+        <servlet-class>com.naldojesse.web.Home</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>User Info</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+</web-app>
+
