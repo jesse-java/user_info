@@ -16,9 +16,18 @@ public class Home extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-//        response.setContentType("text/html");
-//        PrintWriter out = response.getWriter();
-//        out.write("<h1>User Info Website</h1>");
+          String firstName = request.getParameter("first_name");
+          String lastName = request.getParameter("last_name");
+          String favlang = request.getParameter("favlang");
+          String hometown = request.getParameter("hometown");
+          if (firstName == null) { firstName  = "Unknown"; }
+          if (lastName == null) {lastName = "Unknown"; }
+          if (favlang == null) {favlang = "Unknown"; }
+          if (hometown == null) {hometown = "Unknown"; }
+          response.setContentType("text/html");
+          PrintWriter out = response.getWriter();
+          out.write("<h1>Welcome, " + firstName + " " + lastName + "!" +
+                  "\n Your favorite language is: " + favlang +
+                  "\n Your hometown is: " + hometown + "</h1>");
     }
 }
